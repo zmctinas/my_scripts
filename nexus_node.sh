@@ -44,9 +44,10 @@ if ! rustc --version &>/dev/null; then
 
   # 配置 Rust 环境变量
   echo "Configuring Rust environment variables..."
-  source $HOME/.cargo/env
-  if ! grep -q 'source $HOME/.cargo/env' ~/.profile; then
-    echo 'source $HOME/.cargo/env' >> ~/.profile
+#   source $HOME/.cargo/env
+  if ! grep -q '. $HOME/.cargo/env' ~/.profile; then
+    echo '. $HOME/.cargo/env' >> ~/.profile
+    source ~/.profile
     echo "Updated Rust environment configuration in ~/.profile"
   fi
 fi
