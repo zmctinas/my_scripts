@@ -108,7 +108,8 @@ setup_environment() {
 # 功能3：启动 popmd
 start_popmd() {
     echo "启动 popmd..."
-    screen -dmS popmd sh heminetwork/popmd
+    cd heminetwork
+    screen -dmS popmd ./popmd
     echo "popmd 已在 screen 中启动。"
     read -p "按回车返回主菜单..." enter
 }
