@@ -154,7 +154,7 @@ uninstall_heminetwork() {
 # 主菜单
 main_menu() {
     while true; do
-        clear
+        # clear
         echo "===== Heminetwork 管理菜单 ====="
         echo "1. 下载并设置 Heminetwork"
         echo "2. 设置环境变量"
@@ -166,7 +166,7 @@ main_menu() {
         echo "8. 退出"
         echo "==============================="
         echo "脚本作者: K2 节点教程分享"
-        echo "关注推特: https://x.com/BtcK241918"
+        echo "jieli 修改部分代码"
         echo "==============================="
         echo "请选择操作:"
 
