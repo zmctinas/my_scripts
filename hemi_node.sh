@@ -4,7 +4,7 @@
 download_and_setup() {
     apt install jq
     HEMIVERSION="v0.5.0"
-    echo download/$HEMIVERSION/heminetwork
+    echo "download/$HEMIVERSION/heminetwork"
     wget "https://github.com/hemilabs/heminetwork/releases/download/${HEMIVERSION}/heminetwork_${HEMIVERSION}_linux_amd64.tar.gz" -O "heminetwork_${HEMIVERSION}_linux_amd64.tar.gz"
 
     TARGET_DIR="$HOME/heminetwork"
