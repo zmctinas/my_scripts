@@ -4,16 +4,16 @@
 download_and_setup() {
     apt install jq
     HEMIVERSION = "v0.5.0"
-    echo download/${HEMIVERSION}/heminetwork
-    wget https://github.com/hemilabs/heminetwork/releases/download/${HEMIVERSION}/heminetwork_${HEMIVERSION}_linux_amd64.tar.gz -O heminetwork_${HEMIVERSION}_linux_amd64.tar.gz
+    echo download/$HEMIVERSION/heminetwork
+    wget "https://github.com/hemilabs/heminetwork/releases/download/${HEMIVERSION}/heminetwork_${HEMIVERSION}_linux_amd64.tar.gz" -O "heminetwork_${HEMIVERSION}_linux_amd64.tar.gz"
 
     TARGET_DIR="$HOME/heminetwork"
     mkdir -p "$TARGET_DIR"
 
-    tar -xvf heminetwork_${HEMIVERSION}_linux_amd64.tar.gz -C "$TARGET_DIR"
+    tar -xvf "heminetwork_${HEMIVERSION}_linux_amd64.tar.gz" -C "$TARGET_DIR"
 
-    mv "$TARGET_DIR/heminetwork_$HEMIVERSION_linux_amd64/"* "$TARGET_DIR/"
-    rmdir "$TARGET_DIR/heminetwork_$HEMIVERSION_linux_amd64"
+    mv "$TARGET_DIR/heminetwork_${HEMIVERSION}_linux_amd64/"* "$TARGET_DIR/"
+    rmdir "$TARGET_DIR/heminetwork_${HEMIVERSION}_linux_amd64"
 
     cd "$TARGET_DIR"
     ./keygen -secp256k1 -json -net="testnet" > ~/popm-address.json
