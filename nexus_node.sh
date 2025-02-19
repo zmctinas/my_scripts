@@ -50,12 +50,13 @@ if ! rustc --version &>/dev/null; then
     source ~/.profile
     echo "Updated Rust environment configuration in ~/.profile"
   fi
-  rustup target add riscv32i-unknown-none-elf
 fi
 
 # 验证 Rust 是否安装成功
 echo "Verifying Rust installation..."
 rustc --version || { echo "Failed to install Rust!"; exit 1; }
+
+rustup target add riscv32i-unknown-none-elf
 
 # 安装 Nexus CLI
 echo "Running Nexus CLI installation in a new screen session..."
