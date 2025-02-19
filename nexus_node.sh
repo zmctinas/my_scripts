@@ -50,6 +50,7 @@ if ! rustc --version &>/dev/null; then
     source ~/.profile
     echo "Updated Rust environment configuration in ~/.profile"
   fi
+  rustup target add riscv32i-unknown-none-elf
 fi
 
 # 验证 Rust 是否安装成功
